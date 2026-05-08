@@ -1,28 +1,22 @@
-# docker-novnc-zh
-docker-novnc-zh是一个中文linux桌面环境docker镜像.主要包含:
-1. ubuntu + xfce4桌面
+# docker-novnc-zh-debian
+docker-novnc-zh-debian是一个中文linux桌面环境docker镜像.主要包含:
+1. debian + xfce4桌面
 2. vnc + novnc实现web访问
 3. 中文环境 + 中文输入法
 4. novnc双向剪切板支持, 剪切板中文支持
-5. firefox浏览器(非snap版)
+5. firefox浏览器
 6. 修改apt源地址
 7. noVNC增加集成音频，开箱即用
-
-启动内存400M, 浏览器轻度使用内存600M-800M, 正常使用建议有2G内存.
-
-如果你本身有ubuntu要安装上面内容, 可以参考dockerfile中的脚本, 可以避免一些坑(虽然但是应该没有人会拒绝docker吧).
 
 另外在install文件夹下放了我额外安装的应用脚本，因为deb包安装时不可避免出现缺失i依赖的情况。如果安装好后还启动不了，一般在启动器的指令上加上--no-sandbox就好了。
 
 ### 自己打镜像
 
-如果你在墙内进行打包, 请使用inside分支. inside分支在最开始就修改了国内源, 并使用国内git镜像.
 ```
 cd ./docker && docker build -t pikaaq/vnc .
 ```
-现在本镜像已经上传到dockerhub, 你也可以直接拉取, 本地没有镜像时运行启动命令也会自动拉取.
 
-### ~~(原神)~~ 启动
+### 启动
 
 #### 简单启动
 ```
